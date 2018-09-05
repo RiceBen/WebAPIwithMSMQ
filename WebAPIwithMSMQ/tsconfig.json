@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es6"
+  },
+  "include": [
+    "Scripts/**/*"
+  ],
+  "compileOnSave": true
+}
