@@ -20,6 +20,9 @@ namespace WebAPIwithMSMQ.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
+            this._queueService.Send(
+                new { ID = 1 , Name = "Mr.Queue", Age = 18}
+            );
             return new string[] { "value1", "value2" };
         }
 

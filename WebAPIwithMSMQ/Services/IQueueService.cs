@@ -11,9 +11,9 @@ namespace WebAPIwithMSMQ.Services
     public interface IQueueService
     {
         /// <summary>
-        /// Put data into queue
+        /// Send data to Queue
         /// </summary>
-        /// <param name="data"></param>
-        void Put<T>(T data);
+        /// <param name="data">data send to queue</param>
+        void Send(object data);
     }
 }
