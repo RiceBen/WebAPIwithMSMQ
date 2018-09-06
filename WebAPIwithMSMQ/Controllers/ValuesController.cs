@@ -4,12 +4,19 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebAPIwithMSMQ.Services;
 
 namespace WebAPIwithMSMQ.Controllers
 {
-    [Authorize]
     public class ValuesController : ApiController
     {
+        private IQueueService _queueService;
+
+        public ValuesController(IQueueService service)
+        {
+            this._queueService = service;
+        }
+
         // GET api/values
         public IEnumerable<string> Get()
         {
