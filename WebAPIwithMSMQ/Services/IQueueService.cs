@@ -1,19 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace WebAPIwithMSMQ.Services
 {
     /// <summary>
     /// Provide Queue Service
     /// </summary>
-    public interface IQueueService
+    public interface IQueueService : IDisposable
     {
         /// <summary>
         /// Send data to Queue
         /// </summary>
         /// <param name="data">data send to queue</param>
-        void Send(object data);
+        void Send<T>(T data);
+
+        /// <summary>
+        /// Send data to Queue
+        /// </summary>
+        /// <param name="data">data send to queue</param>
+        void Send(string data);
     }
 }
